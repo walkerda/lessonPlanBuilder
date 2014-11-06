@@ -11,23 +11,35 @@
 angular
   .module('lessonPlanBuilderApp', ['ui.router'])
   .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/esl-teacher-tools');
 
       $stateProvider
         .state('home', {
-          url: '/home',
+          url: '/esl-teacher-tools',
           templateUrl: 'views/partials/home.html'
         })
         .state('contact', {
-          url: '/contact',
+          url: '/contact-us',
           templateUrl: '/views/partials/contact.html'
         })
-        .state('tools-lpb', {
-          url: '/tools-lpb',
-          templateUrl: '/views/partials/tools-lpb.html'
+        .state('lpb-home', {
+          url: '/lesson-plan-builder',
+          templateUrl: 'views/partials/lpb-partials/lpb-home.html'
+        })
+        .state('lpb-home.lesson-info', {
+          url: '/lesson-info',
+          templateUrl: 'views/partials/lpb-partials/lpb-lessonInfo.html'
+        })
+        .state('lpb-home.activities', {
+          url: '/activities',
+          templateUrl: 'views/partials/lpb-partials/lpb-activities.html'
+        })
+        .state('lpb-home.print', {
+          url: '/print',
+          templateUrl: 'views/partials/lpb-partials/lpb-print.html'
         })
         .state('blog', {
-          url: '/blog',
+          url: '/esl-teacher-tools-blog',
           templateUrl: '/views/partials/blog.html'
         })
 
