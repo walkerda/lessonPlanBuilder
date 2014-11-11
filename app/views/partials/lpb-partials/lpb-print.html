@@ -1,3 +1,20 @@
-<div class="jumbotron text-center">
-  <h1>Hello Print</h1>
+<div id="print-page" ng-controller="PrintCtrl">
+  <div style="margin-top: 65px; text-align: center;">
+    <h1>PRINT</h1>
+  </div>
+
+  <pre>{{ lessonInfoData }}</pre>
+
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <h2>{{ lessonInfoData.title }}</h2>
+      <p>{{ lessonInfoData.description }}</p>
+      <p>{{ lessonInfoData['teacher-name'] }}</p>
+      <p>{{ lessonInfoData['class-duration'] }}</p>
+      <p>{{ lessonInfoData['lesson-date'] }}</p>
+      <p>{{ lessonInfoData['class-name'] }}</p>
+
+      <button class="btn btn-danger" ng-click="print()">PRINT LESSON PLAN</button>
+    </div>
+  </div>
 </div>

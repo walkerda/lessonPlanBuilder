@@ -9,7 +9,9 @@
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",
-    "angular-scenario": "~1.2.0"
+    "angular-scenario": "~1.2.0",
+    "angular-router": "~0.2.11",
+    "angular-bootstrap": "~0.11.2"
   },
   "appPath": "app"
 }
