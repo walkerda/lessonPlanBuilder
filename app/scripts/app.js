@@ -26,36 +26,34 @@ angular
       $stateProvider
         .state('home', {
           url: '/esl-teacher-tools',
-          templateUrl: 'views/partials/home.html'
+          templateUrl: '/features/homepage/home.html'
         })
         .state('contact', {
           url: '/contact-us',
-          templateUrl: '/views/partials/contact.html'
+          templateUrl: '/features/homepage/contact.html'
         })
         .state('lpb-home', {
           url: '/lesson-plan-builder',
-          templateUrl: 'views/partials/lpb-partials/lpb-home.html'
+          templateUrl: '/features/tools/lessonPlanBuilder/partials/lpb-home.html'
         })
         .state('lpb-home.lesson-info', {
           url: '/lesson-info',
-          templateUrl: 'views/partials/lpb-partials/lpb-lessonInfo.html',
+          templateUrl: '/features/tools/lessonPlanBuilder/partials/lpb-lessonInfo.html',
           controller: 'LessonInfoCtrl'
         })
         .state('lpb-home.activities', {
           url: '/activities',
-          templateUrl: 'views/partials/lpb-partials/lpb-activities.html'
+          templateUrl: '/features/tools/lessonPlanBuilder/partials/lpb-activities.html',
+          controller: 'ActivityCtrl'
         })
         .state('lpb-home.print', {
           url: '/print',
-          templateUrl: 'views/partials/lpb-partials/lpb-print.html',
+          templateUrl: '/features/tools/lessonPlanBuilder/partials/lpb-print.html',
           controller: 'PrintCtrl'
         })
         .state('blog', {
           url: '/esl-teacher-tools-blog',
-          templateUrl: '/views/partials/blog.html'
+          templateUrl: '/features/blog/blog.html'
         })
 
-  })
-  .factory('activityData', function() {
-    return {};
   });

@@ -20,7 +20,7 @@ function myDatePicker() {
         $scope.ngModel = null;
       };
     },
-    templateUrl: '/views/partials/lpb-partials/datepicker.html'
+    templateUrl: '/features/tools/lessonPlanBuilder/partials/datepicker.html'
   }
 }
 
