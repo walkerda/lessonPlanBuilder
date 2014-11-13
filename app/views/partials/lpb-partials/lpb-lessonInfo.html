@@ -29,10 +29,11 @@
           <input class="form-control" id="class-duration" type="number" min="0" step="5"
                  ng-model="lessonInfoData['class-duration']"/>
           <br/>
-          <label for="lesson-date">Lesson Date:</label>
+          <label for="lesson-date" ng-controller="DatePickerCtrl">Lesson Date:</label>
           <!--<input datepicker-popup type="text" id="lesson-date" ng-model="lessonInfoData['lesson-date']"/>-->
-          <mydatepicker ng-model="lessonInfoData['lesson-date']" date-options="{}"
-                        opened="false"></mydatepicker>
+          <my-date-picker ng-model="lessonInfoData['lesson-date']"
+                          date-options="dateOptions"
+                        opened="opened"></my-date-picker>
 
           <hr/>
           <label for="class-name">Class Name:</label>
