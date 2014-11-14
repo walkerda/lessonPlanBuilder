@@ -8,8 +8,4 @@ function LessonInfoCtrl($scope, lessonInfoData) {
 angular
   .module('lessonPlanBuilderApp')
   .controller('LessonInfoCtrl', LessonInfoCtrl)
-  .factory("lessonInfoData", function() {
-    return {};
-  });
-
-
+ 

@@ -10,14 +10,6 @@
  */
 
 
-function PrintCtrl($scope, lessonInfoData) {
-  $scope.lessonInfoData = lessonInfoData;
-
-  function print() {
-
-  }
-}
-
 angular
   .module('lessonPlanBuilderApp', ['ui.router', 'ui.bootstrap'])
   .config(function($stateProvider, $urlRouterProvider) {
