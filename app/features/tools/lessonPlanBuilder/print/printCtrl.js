@@ -1,7 +1,8 @@
 'use strict';
 
-function PrintCtrl($scope, lessonInfoData) {
+function PrintCtrl($scope, lessonInfoData, activityData) {
   $scope.lessonInfoData = lessonInfoData;
+  $scope.activityData = activityData;
 
   $scope.print = function() {
     window.print();

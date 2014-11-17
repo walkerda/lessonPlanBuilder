@@ -2,7 +2,6 @@
 
 function LessonInfoCtrl($scope, lessonInfoData) {
   $scope.lessonInfoData = lessonInfoData;
-
 }
 
 angular

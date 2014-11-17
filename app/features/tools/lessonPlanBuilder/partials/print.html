@@ -1,0 +1,38 @@
+<div id="print-page" ng-controller="PrintCtrl">
+  <div class="section-header">
+    <h1>PREVIEW & PRINT</h1>
+  </div>
+
+  <pre>{{ lessonInfoData }}</pre>
+  <pre>{{ activityData }}</pre>
+
+  <button class="btn btn-danger" ng-click="print()">PRINT LESSON PLAN</button>
+
+  <br/>
+
+  <div class="well">
+    <div>
+      <h5 class="col-sm-4">Lesson Name: </h5>
+      <p class="col-sm-8">{{ lessonInfoData.lessonName }}</p>
+    </div>
+    <div>
+      <h5 class="col-sm-4">Lesson Description: </h5>
+      <p class="col-sm-8">{{ lessonInfoData.lessonDesc }}</p>
+    </div>
+    <div>
+      <h5 class="col-sm-4">Teacher Name: </h5>
+      <p class="col-sm-8">{{ lessonInfoData.TeacherName }}</p>
+    </div>
+
+    <hr/>
+
+    <div>
+      <h6 class="col-sm-4">Activity Name: </h6>
+      <p class="col-sm-8">{{ activityData.activityName }}</p>
+    </div>
+    <div>
+      <h6 class="col-sm-4">Activity Description: </h6>
+      <p class="col-sm-8">{{ activityData.activityDesc }}</p>
+    </div>
+  </div>
+</div>
