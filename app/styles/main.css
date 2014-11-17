@@ -10,4 +10,23 @@
   height: 100%;
 }
 
+<<<<<<< HEAD
 a {cursor:pointer;}
+=======
+.card-body {
+  width: 75%;
+  margin: 0 auto;
+  background-color: beige;
+}
+
+.card-content {
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+
+}
+
+.number-input {
+  width: 45px;
+}
+>>>>>>> form-build

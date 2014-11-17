@@ -1,0 +1,68 @@
+<div>
+
+  <div style="margin: 65px 0 15px 0; text-align: center;">
+    <h1>ACTIVITIES</h1>
+  </div>
+
+  <pre>{{ activityData }}</pre>
+
+  <div class="card-header">
+    <h3>{{ activityData.title }}</h3>
+  </div>
+
+  <div class="card-body">
+    <div class="card-content">
+      <form role="form">
+
+        <div class="form-group">
+          <label>Activity Name:</label>
+          <input class="form-control" ng-model="activityData.title" type="text"/>
+        </div>
+
+        <div class="form-group">
+          <label>Activity Description:</label>
+          <textarea class="form-control" ng-model="activityData.activityDescription" id="" cols="30"
+                    rows="10"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Activity Duration:</label>
+          <input class="number-input" ng-model="activityData.activityDuration" max="{{ lessonInfoData['class-duration'] }}"
+                 min="1"
+                 type="number"> minutes / {{ lessonInfoData['class-duration'] }} minutes
+        </div>
+
+        <div class="form-group">
+          <label>Activity Materials:</label>
+          <input class="checkbox-inline" ng-model="activityData.activityMaterials" ng-true-value="yes"
+                 type="checkbox"> Yes
+          <input class="checkbox-inline" ng-model="activityData.activityMaterials" ng-true-value="no"
+                 type="checkbox"> No
+        </div>
+
+        <div class="form-group">
+          <label>Activity Equipment:</label>
+          <input class="checkbox-inline" ng-model="activityData.activityEquip" ng-true-value="yes"
+                 type="checkbox"> Yes
+          <input class="checkbox-inline" ng-model="activityData.activityEquip" ng-true-value="no"
+                 type="checkbox"> No
+        </div>
+
+        <div class="form-group">
+          <label>Related Objective(s):</label>
+          <select class="form-control">
+            <option value="">Select an objective</option>
+            <option value="objective1">Objective 1</option>
+            <option value="objective2">Objective 2</option>
+            <option value="objective3">Objective 3</option>
+          </select>
+        </div>
+
+        <button class="btn btn-default">Clear Content</button>
+        <button class="btn btn-danger">Complete Activity</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+

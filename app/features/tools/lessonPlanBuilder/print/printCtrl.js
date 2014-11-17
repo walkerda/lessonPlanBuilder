@@ -10,5 +10,5 @@ function PrintCtrl($scope, lessonInfoData) {
 
 angular
   .module('lessonPlanBuilderApp')
-  .controller('PrintCtrl', PrintCtrl)
+  .controller('PrintCtrl', PrintCtrl);
 
