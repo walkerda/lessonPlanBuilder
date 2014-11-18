@@ -11,7 +11,8 @@
 .lpb-guide {
   left: 0;
   margin-top: 50px;
-  width: 150px;
+  margin-left: -15px;
+  width: 75%;
   height: 100%;
 }
 
@@ -33,4 +34,12 @@ a {cursor:pointer;}
 
 .number-input {
   width: 18%;
+}
+
+.side-nav-img {
+  margin: 15px;
+}
+
+.print-btn {
+  margin-bottom: 15px;
 }

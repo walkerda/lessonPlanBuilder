@@ -6,5 +6,5 @@ function LessonInfoCtrl($scope, lessonInfoData) {
 
 angular
   .module('lessonPlanBuilderApp')
-  .controller('LessonInfoCtrl', LessonInfoCtrl);
+  .controller('LessonInfoCtrl', ['$scope', 'lessonInfoData', LessonInfoCtrl]);
 

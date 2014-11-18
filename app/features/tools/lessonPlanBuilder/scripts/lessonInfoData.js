@@ -2,6 +2,6 @@
 
 angular
   .module('lessonPlanBuilderApp')
-  .factory("lessonInfoData", function() {
+  .factory('lessonInfoData', function() {
     return {};
   });

@@ -3,6 +3,7 @@
 angular
   .module('lessonPlanBuilderApp', ['ui.router', 'ui.bootstrap'])
   .config(function($stateProvider, $urlRouterProvider) {
+
     $urlRouterProvider.otherwise('/esl-teacher-tools');
 
       $stateProvider

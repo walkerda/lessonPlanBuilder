@@ -1,3 +1,4 @@
-.nav {display:none;}
+.nav, .navbar, .print-btn, .section-header, pre {
+  display:none;
+}
 
-.navbar {display:none;}

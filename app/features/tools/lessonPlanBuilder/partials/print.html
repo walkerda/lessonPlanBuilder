@@ -6,33 +6,60 @@
   <pre>{{ lessonInfoData }}</pre>
   <pre>{{ activityData }}</pre>
 
-  <button class="btn btn-danger" ng-click="print()">PRINT LESSON PLAN</button>
-
-  <br/>
+  <button class="btn btn-danger print-btn" ng-click="print()">PRINT LESSON PLAN</button>
 
   <div class="well">
-    <div>
-      <h5 class="col-sm-4">Lesson Name: </h5>
-      <p class="col-sm-8">{{ lessonInfoData.lessonName }}</p>
-    </div>
-    <div>
-      <h5 class="col-sm-4">Lesson Description: </h5>
-      <p class="col-sm-8">{{ lessonInfoData.lessonDesc }}</p>
-    </div>
-    <div>
-      <h5 class="col-sm-4">Teacher Name: </h5>
-      <p class="col-sm-8">{{ lessonInfoData.TeacherName }}</p>
-    </div>
-
+    <h4>LESSON INFORMATION</h4>
+    <table class="table">
+      <tr>
+        <td>Lesson Name:</td>
+        <td>{{ lessonInfoData.lessonName }}</td>
+      </tr>
+      <tr>
+        <td>Lesson Description:</td>
+        <td>{{ lessonInfoData.lessonDesc }}</td>
+      </tr>
+      <tr>
+        <td>Teacher Name:</td>
+        <td>{{ lessonInfoData.teacherName }}</td>
+      </tr>
+      <tr>
+        <td>Lesson Duration:</td>
+        <td>{{ lessonInfoData.lessonDuration }}</td>
+      </tr>
+      <tr>
+        <td>Lesson Date:</td>
+        <td>{{ lessonInfoData.lessonDate }}</td>
+      </tr>
+    </table>
     <hr/>
 
-    <div>
-      <h6 class="col-sm-4">Activity Name: </h6>
-      <p class="col-sm-8">{{ activityData.activityName }}</p>
-    </div>
-    <div>
-      <h6 class="col-sm-4">Activity Description: </h6>
-      <p class="col-sm-8">{{ activityData.activityDesc }}</p>
-    </div>
+    <h4>ACTIVITIES</h4>
+    <table class="table">
+      <tr>
+        <td>Activity Name:</td>
+        <td>{{ activityData.activityName }}</td>
+      </tr>
+      <tr>
+        <td>Activity Description:</td>
+        <td>{{ activityData.activityDesc }}</td>
+      </tr>
+      <tr>
+        <td>Activity Duration:</td>
+        <td>{{ activityData.activityDuration }}</td>
+      </tr>
+      <tr>
+        <td>Activity Materials:</td>
+        <td>{{ activityData.activityMat }}</td>
+      </tr>
+      <tr>
+        <td>Activity Equipment:</td>
+        <td>{{ activityData.activityEquip }}</td>
+      </tr>
+      <tr>
+        <td>Related Ojbectives:</td>
+        <td>{{ activityData.relatedObj }}</td>
+      </tr>
+    </table>
   </div>
 </div>
