@@ -2,6 +2,12 @@
 
 angular
   .module('lessonPlanBuilderApp')
-  .factory('lessonInfoData', function() {
-    return {};
+  .service('lessonInfoData', function() {
+    return {
+      lessonName: "",
+      lessonDesc: "",
+      teacherName: "",
+      lessonDuration: "",
+      lessonDate: ""
+    };
   });

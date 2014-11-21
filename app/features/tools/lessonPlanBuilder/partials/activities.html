@@ -1,4 +1,4 @@
-<div ng-controller="ActivityCtrl">
+<div ng-controller="ActivitiesCtrl">
 
   <div class="section-header">
     <h1>ACTIVITIES</h1>
@@ -9,6 +9,10 @@
   <div class="well" ng-repeat="activityData in activities">
 
     <form class="form-horizontal" role="form" name="activityEntry">
+
+      <div>
+        <span class="badge">{{ $index + 1 }}</span>
+      </div>
 
       <div class="form-group">
         <label class="col-sm-4 control-label" for="activityName">Activity Name</label>
@@ -29,7 +33,7 @@
         <label class="col-sm-4 control-label" for="activityDuration">Activity Duration</label>
         <div class="col-sm-8">
           <input class="number-input form-control" id="activityDuration" ng-model="activityData.activityDuration"
-                 min="1" max="lessonInfoData.lessonDuration" step="1" type="number">minutes
+                 ng-minlength="1" ng-maxlength="25" max="{{ lessonInfoData.lessonDuration }}" step="5" min="5" value="5" type="number">
         </div>
       </div>
 
