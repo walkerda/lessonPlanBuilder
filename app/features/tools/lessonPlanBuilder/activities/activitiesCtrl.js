@@ -17,5 +17,5 @@ function ActivitiesCtrl($scope, activityData, lessonInfoData) {
 
 angular
   .module('lessonPlanBuilderApp')
-  .controller('ActivityCtrl', ['$scope', 'activityData', 'lessonInfoData', ActivitiesCtrl]);
+  .controller('ActivitiesCtrl', ['$scope', 'activityData', 'lessonInfoData', ActivitiesCtrl]);
 

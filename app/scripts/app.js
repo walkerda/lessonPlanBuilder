@@ -27,7 +27,7 @@ angular
         .state('lpb-home.activities', {
           url: '/activities',
           templateUrl: '/features/tools/lessonPlanBuilder/partials/activities.html',
-          controller: 'ActivityCtrl'
+          controller: 'ActivitiesCtrl'
         })
         .state('lpb-home.print', {
           url: '/print',
