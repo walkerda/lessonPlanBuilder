@@ -4,7 +4,7 @@
   </div>
 
   <pre>{{ lessonInfoData }}</pre>
-  <pre>{{ activityData }}</pre>
+  <pre ng-repeat="activityData in activities">{{ activityData }}</pre>
 
   <button class="btn btn-danger print-btn" ng-click="print()">PRINT LESSON PLAN</button>
 
@@ -35,7 +35,7 @@
     <hr/>
 
     <h4>ACTIVITIES</h4>
-    <table class="table">
+    <table class="table" ng-repeat="activityData in activities">
       <tr>
         <td>Activity Name:</td>
         <td>{{ activityData.activityName }}</td>

@@ -2,7 +2,7 @@
 
 function PrintCtrl($scope, lessonInfoData, activityData) {
   $scope.lessonInfoData = lessonInfoData;
-  $scope.activityData = activityData;
+  $scope.activities = activityData.activities;
 
   $scope.print = function() {
     window.print();

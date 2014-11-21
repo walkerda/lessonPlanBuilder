@@ -1,17 +1,19 @@
 'use strict';
 
 function ActivitiesCtrl($scope, activityData, lessonInfoData) {
-  var emptyActivityEntry = angular.copy(activityData);
 
-  $scope.activities = [activityData];
+  $scope.activities = activityData.activities;
+  
   $scope.lessonInfoData = lessonInfoData;
 
+  // move this function to service
   $scope.addActivity = function(){
-    $scope.activities.push(angular.copy(emptyActivityEntry));
+    $scope.activities.push(angular.copy(activityData.emptyActivity));
   };
 
+  // move this function to service
   $scope.clearContents = function(index) {
-    $scope.activities[index] = angular.copy(emptyActivityEntry);
+    $scope.activities[index] = angular.copy(activityData.emptyActivity);
   };
 }
 
