@@ -24,6 +24,11 @@ angular
           templateUrl: '/features/tools/lessonPlanBuilder/partials/lessonInfo.html',
           controller: 'LessonInfoCtrl'
         })
+        .state('lpb-home.objectives', {
+          url: '/objectives',
+          templateUrl: '/features/tools/lessonPlanBuilder/partials/objectives.html',
+          controller: 'ObjectivesCtrl'
+        })
         .state('lpb-home.activities', {
           url: '/activities',
           templateUrl: '/features/tools/lessonPlanBuilder/partials/activities.html',

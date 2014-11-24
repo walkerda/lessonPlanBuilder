@@ -1,23 +1,15 @@
 'use strict';
 
-function ActivitiesCtrl($scope, activityData, lessonInfoData) {
+function ActivitiesCtrl($scope, ActivityService, LessonInfoService) {
 
-  $scope.activities = activityData.activities;
-  
-  $scope.lessonInfoData = lessonInfoData;
+  $scope.activities = ActivityService.activities;
+  $scope.lessonInfoData = LessonInfoService.lessonInfo;
 
-  // move this function to service
-  $scope.addActivity = function(){
-    $scope.activities.push(angular.copy(activityData.emptyActivity));
-  };
-
-  // move this function to service
-  $scope.clearContents = function(index) {
-    $scope.activities[index] = angular.copy(activityData.emptyActivity);
-  };
+  //$scope.addActivity = ActivityService.add();
+  //$scope.clearContents = ActivityService.clear();
 }
 
 angular
   .module('lessonPlanBuilderApp')
-  .controller('ActivitiesCtrl', ['$scope', 'activityData', 'lessonInfoData', ActivitiesCtrl]);
+  .controller('ActivitiesCtrl', ['$scope', 'ActivityService', 'LessonInfoService', ActivitiesCtrl]);
 

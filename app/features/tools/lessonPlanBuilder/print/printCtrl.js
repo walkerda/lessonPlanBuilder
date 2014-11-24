@@ -1,8 +1,9 @@
 'use strict';
 
-function PrintCtrl($scope, lessonInfoData, activityData) {
-  $scope.lessonInfoData = lessonInfoData;
-  $scope.activities = activityData.activities;
+function PrintCtrl($scope, LessonInfoService, ActivityService, ObjectivesService) {
+  $scope.lessonInfoData = LessonInfoService.lessonInfo;
+  $scope.activities = ActivityService.activities;
+  $scope.objectives = ObjectivesService.objectives;
 
   $scope.print = function() {
     window.print();
@@ -11,5 +12,5 @@ function PrintCtrl($scope, lessonInfoData, activityData) {
 
 angular
   .module('lessonPlanBuilderApp')
-  .controller('PrintCtrl', ['$scope', 'lessonInfoData', 'activityData', PrintCtrl]);
+  .controller('PrintCtrl', ['$scope', 'LessonInfoService', 'ActivityService', 'ObjectivesService', PrintCtrl]);
 
