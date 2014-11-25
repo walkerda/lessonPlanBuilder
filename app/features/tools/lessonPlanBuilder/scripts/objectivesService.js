@@ -2,14 +2,19 @@
 
 function ObjectivesService() {
 
+  var counter = 1;
+  
   var emptyObjective = {
-    objDesc: ""
+    objDesc: "",
+    objValue: counter
   };
 
   var objectives = [angular.copy(emptyObjective)];
+ 
 
   function addObjective() {
-    objectives.push(angular.copy(emptyObjective));
+    var newObjective = angular.copy(emptyObjective);
+    objectives.push(newObjective);
   }
 
   return {

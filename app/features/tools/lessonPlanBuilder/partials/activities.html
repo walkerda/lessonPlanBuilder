@@ -2,7 +2,7 @@
     <h1>ACTIVITIES</h1>
   </div>
 
-  <pre ng-repeat="activity in activities">{{ activities }}</pre>
+  <pre ng-repeat="activity in activities">{{ activity }}</pre>
 
   <div class="well" ng-repeat="activity in activities">
 
@@ -68,9 +68,7 @@
         <div class="col-sm-8">
           <select class="form-control" id="relatedObj" ng-model="activity.relatedObj">
             <option value="">Select an objective</option>
-            <option value="objective1">Objective 1</option>
-            <option value="objective2">Objective 2</option>
-            <option value="objective3">Objective 3</option>
+            <option value="{{objective.objValue}}" ng-repeat="objective in objectives">{{objective.objDesc }}</option>
           </select>
         </div>
       </div>
