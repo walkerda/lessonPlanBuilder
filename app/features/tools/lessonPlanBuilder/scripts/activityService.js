@@ -10,9 +10,11 @@ function ActivityService() {
     relatedObj: ""
   };
 
-  //function addActivity() {
-  //  return ActivityService.activities.push(angular.copy(ActivityService.emptyActivity));
-  //}
+  var activities = [angular.copy(emptyActivity)];
+
+  function addActivity() {
+    activities.push(angular.copy(emptyActivity));
+  }
 
   //function clearActivityContents(index) {
   //  ActivityService.activities[index] = angular.copy(ActivityService.emptyActivity);
@@ -20,9 +22,8 @@ function ActivityService() {
   //}
 
   return {
-    activities: [angular.copy(emptyActivity)],
-    emptyActivity: emptyActivity
-    //add: addActivity,
+    activities: activities,
+    add: addActivity
     //clear: clearActivityContents
   };
 }

@@ -6,19 +6,17 @@ function ObjectivesService() {
     objDesc: ""
   };
 
+  var objectives = [angular.copy(emptyObjective)];
+
   function addObjective() {
-    ObjectivesService.objectives.push(angular.copy(ObjectivesService.emptyObjective));
-    //return;
+    objectives.push(angular.copy(emptyObjective));
   }
 
   return {
-    objectives: [angular.copy(emptyObjective)],
-    emptyObjective: emptyObjective,
+    objectives: objectives,
     add: addObjective
   };
 }
-
-
 
 angular
   .module('lessonPlanBuilderApp')

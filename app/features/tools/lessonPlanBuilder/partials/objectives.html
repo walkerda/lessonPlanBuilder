@@ -2,9 +2,9 @@
   <h1>OBJECTIVES</h1>
 </div>
 
-<pre ng-repeat="objectives in objectives">{{ objectives }}</pre>
+<pre ng-repeat="objective in objectives">{{ objectives }}</pre>
 
-<div class="well" ng-repeat="objectives in objectives">
+<div class="well" ng-repeat="objective in objectives">
 
   <form class="form-horizontal" role="form" name="objectiveEntry">
 
@@ -15,7 +15,7 @@
     <div class="form-group">
       <label class="col-sm-4 control-label" for="objDesc">Objective Description</label>
       <div class="col-sm-8">
-        <input id="objDesc" ng-model="objectives.objDesc" class="form-control" type="text"/>
+        <input id="objDesc" ng-model="objective.objDesc" class="form-control" type="text"/>
       </div>
     </div>
   </form>

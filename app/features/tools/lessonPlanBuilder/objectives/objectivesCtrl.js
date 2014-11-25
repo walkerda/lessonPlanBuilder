@@ -2,12 +2,10 @@
 
 function ObjectivesCtrl($scope, ObjectivesService) {
 
-  $scope.ObjectivesService = ObjectivesService;
   $scope.objectives = ObjectivesService.objectives;
-  //$scope.addObjective = function() {
-  //  $scope.objectives.push(angular.copy(ObjectivesService.emptyObjective));
-  //};
-  $scope.addObjective = ObjectivesService.add();
+  $scope.addObjective = function() {
+    ObjectivesService.add();
+  };
 
 }
 

@@ -5,8 +5,13 @@ function ActivitiesCtrl($scope, ActivityService, LessonInfoService) {
   $scope.activities = ActivityService.activities;
   $scope.lessonInfoData = LessonInfoService.lessonInfo;
 
-  //$scope.addActivity = ActivityService.add();
-  //$scope.clearContents = ActivityService.clear();
+  $scope.addActivity = function() {
+    ActivityService.add();
+  };
+
+  $scope.clearContents = function() {
+    ActivityService.clear();
+  };
 }
 
 angular

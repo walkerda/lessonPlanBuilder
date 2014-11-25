@@ -4,8 +4,8 @@
   </div>
 
   <pre>{{ lessonInfoData }}</pre>
-  <pre ng-repeat="activities in activities">{{ activities }}</pre>
-  <pre ng-repeat="objectives in objectives">{{ objectives }}</pre>
+  <pre ng-repeat="activity in activities">{{ activities }}</pre>
+  <pre ng-repeat="objective in objectives">{{ objectives }}</pre>
 
   <button class="btn btn-danger print-btn" ng-click="print()">PRINT LESSON PLAN</button>
 
@@ -36,39 +36,39 @@
     <hr/>
 
     <h4>OBJECTIVES</h4>
-    <table class="table" ng-repeat="objectives in objectives">
+    <table class="table" ng-repeat="objective in objectives">
       <tr>
         <td>Objective:</td>
-        <td>{{ objectives.objDesc }}</td>
+        <td>{{ objective.objDesc }}</td>
       </tr>
     </table>
     <hr/>
 
     <h4>ACTIVITIES</h4>
-    <table class="table" ng-repeat="activities in activities">
+    <table class="table" ng-repeat="activity in activities">
       <tr>
         <td>Activity Name:</td>
-        <td>{{ activities.activityName }}</td>
+        <td>{{ activity.activityName }}</td>
       </tr>
       <tr>
         <td>Activity Description:</td>
-        <td>{{ activities.activityDesc }}</td>
+        <td>{{ activity.activityDesc }}</td>
       </tr>
       <tr>
         <td>Activity Duration:</td>
-        <td>{{ activities.activityDuration }}</td>
+        <td>{{ activity.activityDuration }}</td>
       </tr>
       <tr>
         <td>Activity Materials:</td>
-        <td>{{ activities.activityMat }}</td>
+        <td>{{ activity.activityMat }}</td>
       </tr>
       <tr>
         <td>Activity Equipment:</td>
-        <td>{{ activities.activityEquip }}</td>
+        <td>{{ activity.activityEquip }}</td>
       </tr>
       <tr>
         <td>Related Objectives:</td>
-        <td>{{ activities.relatedObj }}</td>
+        <td>{{ activity.relatedObj }}</td>
       </tr>
     </table>
   </div>

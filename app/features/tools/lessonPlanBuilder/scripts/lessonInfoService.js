@@ -10,9 +10,23 @@ function LessonInfoService() {
     lessonDate: ""
   };
 
+  var ls = LessonInfoService;
+
   function clearLessonInfo() {
-    console.log('it works');
+    ls.lessonInfo = angular.copy(emptyLesson);
+    if (ls.lessonInfo) {
+      ls.lessonInfo.$setPristine();
+    }
   }
+
+  //var emptyLessonInfo = angular.copy(LessonInfoService.lessonInfo);
+
+  //$scope.clearContents = function() {
+  //  $scope.lessonInfoData = angular.copy(emptyLessonInfo);
+  //  if ($scope.lessonInfo) {
+  //    $scope.lessonInfo.$setPristine();
+  //  }
+  //}
 
     return {
       lessonInfo: emptyLesson,
