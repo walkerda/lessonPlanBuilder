@@ -3,7 +3,7 @@
     <h1>PREVIEW & PRINT</h1>
   </div>
 
-  <pre>{{ lessonInfoData }}</pre>
+  <pre>{{ lessonInfo }}</pre>
   <pre ng-repeat="activity in activities">{{ activities }}</pre>
   <pre ng-repeat="objective in objectives">{{ objectives }}</pre>
 
@@ -14,23 +14,23 @@
     <table class="table">
       <tr>
         <td>Lesson Name:</td>
-        <td>{{ lessonInfoData.lessonName }}</td>
+        <td>{{ lessonInfo.lessonName }}</td>
       </tr>
       <tr>
         <td>Lesson Description:</td>
-        <td>{{ lessonInfoData.lessonDesc }}</td>
+        <td>{{ lessonInfo.lessonDesc }}</td>
       </tr>
       <tr>
         <td>Teacher Name:</td>
-        <td>{{ lessonInfoData.teacherName }}</td>
+        <td>{{ lessonInfo.teacherName }}</td>
       </tr>
       <tr>
         <td>Lesson Duration:</td>
-        <td>{{ lessonInfoData.lessonDuration }}</td>
+        <td>{{ lessonInfo.lessonDuration }}</td>
       </tr>
       <tr>
         <td>Lesson Date:</td>
-        <td>{{ lessonInfoData.lessonDate }}</td>
+        <td>{{ lessonInfo.lessonDate }}</td>
       </tr>
     </table>
     <hr/>

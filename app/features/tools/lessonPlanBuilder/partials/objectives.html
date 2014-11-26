@@ -8,16 +8,17 @@
 
   <form class="form-horizontal" role="form" name="objectiveEntry">
 
-    <div>
-      <span class="badge">{{ $index + 1 }}</span>
-    </div>
-
     <div class="form-group">
+      <div class="col-sm-1"><span class="badge">{{ $index + 1 }}</span></div>
       <label class="col-sm-4 control-label" for="objDesc">Objective Description</label>
-      <div class="col-sm-8">
+      <div class="col-sm-6">
         <input id="objDesc" ng-model="objective.objDesc" class="form-control" type="text"/>
       </div>
+      <div class="col-sm-1">
+        <a ng-click="deleteObjective($index)"><span class="glyphicon glyphicon-remove-circle"></span></a>
+      </div>
     </div>
+
   </form>
 </div>
 

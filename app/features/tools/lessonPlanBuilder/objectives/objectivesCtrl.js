@@ -3,9 +3,8 @@
 function ObjectivesCtrl($scope, ObjectivesService) {
 
   $scope.objectives = ObjectivesService.objectives;
-  $scope.addObjective = function() {
-    ObjectivesService.add();
-  };
+  $scope.addObjective = ObjectivesService.add;
+  $scope.deleteObjective = ObjectivesService.delete;
 
 }
 

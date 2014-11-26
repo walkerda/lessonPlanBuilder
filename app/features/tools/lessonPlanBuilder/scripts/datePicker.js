@@ -25,7 +25,7 @@ function myDatePicker() {
 }
 
 function DatePickerCtrl($scope, lessonInfoData) {
-  $scope.lessonInfoData = lessonInfoData;
+  $scope.lessonInfo = lessonInfoData;
   $scope.opened = false;
 
   $scope.dateOptions = {

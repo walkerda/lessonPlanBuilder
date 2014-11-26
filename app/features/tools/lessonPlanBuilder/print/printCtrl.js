@@ -1,7 +1,7 @@
 'use strict';
 
 function PrintCtrl($scope, LessonInfoService, ActivityService, ObjectivesService) {
-  $scope.lessonInfoData = LessonInfoService.lessonInfo;
+  $scope.lessonInfo = LessonInfoService.lessonInfo;
   $scope.activities = ActivityService.activities;
   $scope.objectives = ObjectivesService.objectives;
 

@@ -16,18 +16,22 @@ function ActivityService() {
     activities.push(angular.copy(emptyActivity));
   }
 
-  //function clearActivityContents(index) {
-  //  ActivityService.activities[index] = angular.copy(ActivityService.emptyActivity);
-  //  return ActivityService.activities[index];
-  //}
+  function clearActivityContents(index) {
+    activities[index] = angular.copy(emptyActivity);
+  }
+
+  function deleteActivity(index) {
+    activities.splice(index, 1);
+  }
 
   return {
     activities: activities,
-    add: addActivity
-    //clear: clearActivityContents
+    add: addActivity,
+    clear: clearActivityContents,
+    delete: deleteActivity
   };
 }
 
 angular
   .module('lessonPlanBuilderApp')
-  .factory('ActivityService', ActivityService);
+  .factory('ActivityService', [ActivityService]);

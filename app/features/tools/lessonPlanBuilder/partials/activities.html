@@ -31,7 +31,7 @@
         <label class="col-sm-4 control-label" for="activityDuration">Activity Duration</label>
         <div class="col-sm-8">
           <input class="number-input form-control" id="activityDuration" ng-model="activity.activityDuration"
-                 ng-minlength="1" ng-maxlength="25" max="{{ lessonInfoData.lessonDuration }}" step="5" min="5" value="5" type="number">
+                 ng-minlength="1" ng-maxlength="25" max="{{ lessonInfo.lessonDuration }}" step="5" min="5" value="5" type="number">
         </div>
       </div>
 
@@ -68,7 +68,8 @@
         <div class="col-sm-8">
           <select class="form-control" id="relatedObj" ng-model="activity.relatedObj">
             <option value="">Select an objective</option>
-            <option value="{{objective.objValue}}" ng-repeat="objective in objectives">{{objective.objDesc }}</option>
+            <option ng-repeat="objective in objectives" ng-hide="objective.objDesc === ''"
+                    value="{{ $index + 1 }}">{{$index + 1 + ". " + objective.objDesc }}</option>
           </select>
         </div>
       </div>
@@ -78,7 +79,7 @@
       <div class="form-group">
         <div class="col-sm-offset-6 col-sm-6 text-right">
           <button type="button" class="btn btn-default btn-sm" ng-click="clearContents($index)">Clear Contents</button>
-          <button type="button" class="btn btn-danger btn-sm">Complete Activity</button>
+          <button type="button" class="btn btn-danger btn-sm" ng-click="deleteActivity($index)">Delete Activity</button>
         </div>
       </div>
 
