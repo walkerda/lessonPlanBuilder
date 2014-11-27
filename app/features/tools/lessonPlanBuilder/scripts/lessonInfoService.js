@@ -13,9 +13,9 @@ function LessonInfoService() {
   var lessonInfo = angular.copy(emptyLesson);
 
   function clearLessonInfo() {
-    lessonInfo = angular.copy(emptyLesson);
+    lessonInfo = angular.copy(lessonInfo);
+    //form.$setPristine();
     console.log("trying to clear contents");
-
   }
 
     return {

@@ -2,18 +2,16 @@
 
 function LessonInfoCtrl($scope, LessonInfoService) {
 
-  //var emptyLessonInfo = angular.copy(LessonInfoService.lessonInfo);
+  var emptyLessonInfo = angular.copy(LessonInfoService.lessonInfo);
 
   $scope.lessonInfo = LessonInfoService.lessonInfo;
 
-  $scope.clearContents = LessonInfoService.clear;
+  //$scope.clearContents = LessonInfoService.clear;
 
-  //$scope.clearContents = function() {
-  //  $scope.lessonInfoData = angular.copy(emptyLessonInfo);
-  //  if ($scope.lessonInfo) {
-  //    $scope.lessonInfoForm.$setPristine();
-  //  }
-  //};
+  $scope.clearContents = function() {
+    $scope.lessonInfo = angular.copy(emptyLessonInfo);
+    $scope.lessonInfoForm.$setPristine();
+  };
 }
 
 angular

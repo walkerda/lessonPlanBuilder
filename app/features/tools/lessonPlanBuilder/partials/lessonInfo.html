@@ -23,53 +23,53 @@
         </div>
       </div>
 
-      <div class="form-group" ng-class="{'has-error has-feedback' : lessonInfo.lessonDesc.$invalid && lessonInfo.lessonDesc.$dirty}">
+      <div class="form-group" ng-class="{'has-error has-feedback' : lessonInfoForm.lessonDesc.$invalid && lessonInfoForm.lessonDesc.$dirty}">
         <label class="col-sm-4 control-label" for="lessonDesc">Lesson Description</label>
         <div class="col-sm-8">
           <textarea class="form-control" name="lessonDesc" placeholder="Enter a description for the lesson" id="lessonDesc" cols="12" rows="4"
                     ng-model="lessonInfo.lessonDesc" required></textarea>
-          <span ng-show="lessonInfo.lessonName.$invalid && lessonInfo.lessonName.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
+          <span ng-show="lessonInfoForm.lessonName.$invalid && lessonInfoForm.lessonName.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
           <span class="sr-only">(error)</span>
-          <div class="error-container help-block" ng-show="lessonInfo.lessonDesc.$invalid && lessonInfo.lessonDesc.$dirty">
-            <span class="error" ng-show="lessonInfo.lessonDesc.$error.required">Please enter a description for the lesson.</span>
+          <div class="error-container help-block" ng-show="lessonInfoForm.lessonDesc.$invalid && lessonInfoForm.lessonDesc.$dirty">
+            <span class="error" ng-show="lessonInfoForm.lessonDesc.$error.required">Please enter a description for the lesson.</span>
           </div>
         </div>
       </div>
 
-      <div class="form-group" ng-class="{'has-error has-feedback' : lessonInfo.teacherName.$invalid && lessonInfo.teacherName.$dirty}">
+      <div class="form-group" ng-class="{'has-error has-feedback' : lessonInfoForm.teacherName.$invalid && lessonInfoForm.teacherName.$dirty}">
         <label class="col-sm-4 control-label" for="teacherName">Teacher Name</label>
         <div class="col-sm-8">
           <input ng-model="lessonInfo.teacherName" name="teacherName" id="teacherName" placeholder="John Doe / Jane Doe" class="form-control" type="text" required/>
-          <span ng-show="lessonInfo.teacherName.$invalid && lessonInfo.teacherName.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
+          <span ng-show="lessonInfoForm.teacherName.$invalid && lessonInfoForm.teacherName.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
           <span class="sr-only">(error)</span>
-          <div class="error-container help-block" ng-show="lessonInfo.teacherName.$invalid && lessonInfo.teacherName.$dirty">
-            <span class="error" ng-show="lessonInfo.teacherName.$error.required">Please enter a teacher's name.</span>
+          <div class="error-container help-block" ng-show="lessonInfoForm.teacherName.$invalid && lessonInfoForm.teacherName.$dirty">
+            <span class="error" ng-show="lessonInfoForm.teacherName.$error.required">Please enter a teacher's name.</span>
           </div>
         </div>
       </div>
 
-      <div class="form-group" ng-class="{'has-error has-feedback' : lessonInfo.lessonDuration.$invalid && lessonInfo.lessonDuration.$dirty}">
+      <div class="form-group" ng-class="{'has-error has-feedback' : lessonInfoForm.lessonDuration.$invalid && lessonInfoForm.lessonDuration.$dirty}">
         <label class="col-sm-4 control-label" for="lessonDuration">Lesson Duration</label>
         <div class="col-sm-8">
           <input class="number-input form-control" id="lessonDuration" name="lessonDuration" ng-model="lessonInfo.lessonDuration"
                  min="5" step="5" value="5" type="number" required>
-          <span ng-show="lessonInfo.lessonDuration.$invalid && lessonInfo.lessonDuration.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
+          <span ng-show="lessonInfoForm.lessonDuration.$invalid && lessonInfoForm.lessonDuration.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
           <span class="sr-only">(error)</span>
-          <div class="error-container help-block" ng-show="lessonInfo.lessonDuration.$invalid && lessonInfo.lessonDuration.$dirty">
-            <span class="error" ng-show="lessonInfo.lessonDuration.$error.required">Please enter a lesson duration for the lesson.</span>
+          <div class="error-container help-block" ng-show="lessonInfoForm.lessonDuration.$invalid && lessonInfoForm.lessonDuration.$dirty">
+            <span class="error" ng-show="lessonInfoForm.lessonDuration.$error.required">Please enter a lesson duration for the lesson.</span>
           </div>
         </div>
       </div>
 
-      <div class="form-group" ng-class="{'has-error has-feedback' : lessonInfo.lessonDate.$invalid && lessonInfo.lessonDate.$dirty}">
+      <div class="form-group" ng-class="{'has-error has-feedback' : lessonInfoForm.lessonDate.$invalid && lessonInfo.lessonDate.$dirty}">
         <label class="col-sm-4 control-label">Lesson Date</label>
         <div class="col-sm-8">
           <!--<my-date-picker required></my-date-picker>-->
           <input type="date" placeholder="mm/dd/yy" class="form-control date" ng-model="lessonInfo.lessonDate" name="lessonDate" required/>
-          <span ng-show="lessonInfo.lessonDate.$invalid && lessonInfo.lessonDate.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
+          <span ng-show="lessonInfoForm.lessonDate.$invalid && lessonInfoForm.lessonDate.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
           <span class="sr-only">(error)</span>
-          <div class="error-container help-block" ng-show="lessonInfo.lessonDate.$invalid && lessonInfo.lessonDate.$dirty">
-            <span class="error" ng-show="lessonInfo.lessonDate.$error.required">Please enter a date for the lesson.</span>
+          <div class="error-container help-block" ng-show="lessonInfoForm.lessonDate.$invalid && lessonInfoForm.lessonDate.$dirty">
+            <span class="error" ng-show="lessonInfoForm.lessonDate.$error.required">Please enter a date for the lesson.</span>
           </div>
         </div>
       </div>
