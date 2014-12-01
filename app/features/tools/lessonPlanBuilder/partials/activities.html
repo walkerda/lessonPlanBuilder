@@ -4,7 +4,7 @@
 
   <pre ng-repeat="activity in activities">{{ activity }}</pre>
 
-  <div class="well" ng-repeat="activity in activities">
+  <div class="well form-area" ng-repeat="activity in activities">
 
     <form class="form-horizontal" role="form" name="activityEntry">
 
@@ -66,10 +66,10 @@
       <div class="form-group">
         <label class="col-sm-4 control-label" for="relatedObj">Related Objective(s)</label>
         <div class="col-sm-8">
-          <select multiple class="form-control" id="relatedObj" ng-model="activity.relatedObj">
+          <select class="form-control" id="relatedObj" ng-model="activity.relatedObj">
             <option value="">Select an objective</option>
             <option ng-repeat="objective in objectives" ng-hide="objective.objDesc === ''"
-                    value="{{ $index + 1 }}">{{$index + 1 + ". " + objective.objDesc }}</option>
+                    value="{{ $index }}">{{$index + 1 + ". " + objective.objDesc }}</option>
           </select>
           <p class="help-block">Hold the <kbd>Ctrl / Cmd</kbd> key and click to select multiple entries</p>
         </div>

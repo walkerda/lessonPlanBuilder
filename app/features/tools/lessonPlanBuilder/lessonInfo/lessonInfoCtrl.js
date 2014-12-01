@@ -6,7 +6,6 @@ function LessonInfoCtrl($scope, LessonInfoService) {
 
   $scope.lessonInfo = LessonInfoService.lessonInfo;
 
-  //$scope.clearContents = LessonInfoService.clear;
 
   $scope.clearContents = function() {
     $scope.lessonInfo = angular.copy(emptyLessonInfo);

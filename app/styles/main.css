@@ -1,4 +1,62 @@
 
+/* Global */
+
+a { cursor:pointer; }
+
+/* Navbars */
+
+.main-navbar {
+  box-shadow: none;
+  font-size: 1.2em;
+  background-color: #3A3232;
+}
+
+.navbar-inverse .navbar-brand {
+  font-family: 'Bitter', serif;
+  font-size: 1.5em;
+  color: #D83018;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #D83018;
+}
+
+.navbar-inverse .navbar-text {
+  color: #343838;
+}
+
+.sidebar-nav {
+  margin-top: 50px;
+  margin-left: -15px;
+  width: 100px;
+  height: 100%;
+  border-bottom: 1px solid gray;
+  background-color: #D83018;
+}
+
+.sidebar-nav-img-container {
+  margin: 0 auto;
+}
+
+.side-nav-img {
+  margin: 15px;
+}
+
+.sidenav-button {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 2em;
+  /*background-color: transparent;*/
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  margin: 0 12px;
+}
+
+/* Main Window */
+
 .section-header {
   margin-top: 65px;
   text-align: center;
@@ -8,38 +66,24 @@
   margin-top: 75px;
 }
 
-.lpb-guide {
-  left: 0;
-  margin-top: 50px;
-  margin-left: -15px;
-  width: 75%;
-  height: 100%;
-}
-
-
-a {cursor:pointer;}
-
-.card-body {
-  width: 75%;
-  margin: 0 auto;
-  background-color: beige;
-}
-
-.card-content {
-  width: 75%;
-  margin: 0 auto;
-  padding: 20px 0 20px 0;
-
+.print-btn {
+  margin-bottom: 15px;
 }
 
 .number-input {
   width: 18%;
 }
 
-.side-nav-img {
-  margin: 15px;
+/* Footer */
+
+footer {
+  height: 70px;
+  position: fixed;
 }
 
-.print-btn {
-  margin-bottom: 15px;
-}
+
+
+
+
+
+
