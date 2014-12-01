@@ -8,34 +8,19 @@ a { cursor:pointer; }
 .main-navbar {
   box-shadow: none;
   font-size: 1.2em;
-  background-color: #3A3232;
-}
-
-.navbar-inverse .navbar-brand {
-  font-family: 'Bitter', serif;
-  font-size: 1.5em;
-  color: #D83018;
-}
-
-.navbar-inverse .navbar-brand:hover {
-  color: #D83018;
-}
-
-.navbar-inverse .navbar-text {
-  color: #343838;
 }
 
 .sidebar-nav {
   margin-top: 50px;
   margin-left: -15px;
-  width: 100px;
+  width: 125px;
   height: 100%;
   border-bottom: 1px solid gray;
-  background-color: #D83018;
+/*   background-color: #D83018; */
 }
 
-.sidebar-nav-img-container {
-  margin: 0 auto;
+.sidebar-nav-container {
+  margin-top: 15px;
 }
 
 .side-nav-img {
@@ -43,12 +28,11 @@ a { cursor:pointer; }
 }
 
 .sidenav-button {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
   cursor: pointer;
-  font-size: 2em;
-  /*background-color: transparent;*/
+  font-size: 3em;
   box-shadow: none;
   border-radius: 0;
   border: none;
@@ -62,17 +46,30 @@ a { cursor:pointer; }
   text-align: center;
 }
 
-.panel {
-  margin-top: 75px;
+.well {
+  margin-top: 50px;
+  background-color: #7a8288;
 }
 
 .print-btn {
   margin-bottom: 15px;
+  border: none;
+}
+
+.lower-button {
+  margin-top: 15px;
 }
 
 .number-input {
   width: 18%;
 }
+
+.badge {
+  font-size: 2em;
+  background-color: #272b30;
+  border-radius: 5px;
+}
+
 
 /* Footer */
 

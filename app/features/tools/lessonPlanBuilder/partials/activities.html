@@ -2,7 +2,7 @@
     <h1>ACTIVITIES</h1>
   </div>
 
-  <pre ng-repeat="activity in activities">{{ activity }}</pre>
+<!--   <pre ng-repeat="activity in activities">{{ activity }}</pre> -->
 
   <div class="well form-area" ng-repeat="activity in activities">
 
@@ -12,30 +12,44 @@
         <span class="badge">{{ $index + 1 }}</span>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{'has-error has-feedback' : activityEntry.activityName.$invalid && activityEntry.activityName.$dirty}">
         <label class="col-sm-4 control-label" for="activityName">Activity Name</label>
         <div class="col-sm-8">
-          <input id="activityName" ng-model="activity.activityName" class="form-control" type="text"/>
+          <input id="activityName" name="activityName" ng-model="activity.activityName" class="form-control" type="text" required/>
+          <span ng-show="activityEntry.activityName.$invalid && activityEntry.activityName.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
+          <span class="sr-only">(error)</span>
+          <div class="help-block" ng-show="activityEntry.activityName.$invalid && activityEntry.activityName.$dirty">
+            <span class="error" ng-show="activityEntry.activityName.$error.required">Please enter a name for the activity.</span>
+          </div>
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{'has-error has-feedback' : activityEntry.activityDesc.$invalid && activityEntry.activityDesc.$dirty}">
         <label class="col-sm-4 control-label" for="activityDesc">Activity Description</label>
         <div class="col-sm-8">
-          <textarea class="form-control" id="activityDesc" cols="12" rows="4"
-                    ng-model="activity.activityDesc"></textarea>
+          <textarea class="form-control" id="activityDesc" name="activityDesc" cols="12" rows="4"
+                    ng-model="activity.activityDesc" required></textarea>
+          <span ng-show="activityEntry.activityDesc.$invalid && activityEntry.activityDesc.$dirty" class="glyphicon glyphicon-remove form-control-feedback"></span>
+          <span class="sr-only">(error)</span>
+          <div class="help-block" ng-show="activityEntry.activityDesc.$invalid && activityEntry.activityDesc.$dirty">
+            <span class="error" ng-show="activityEntry.activityDesc.$error.required">Please enter a description for the activity.</span>
+          </div>
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{'has-error' : activityEntry.activityDuration.$invalid && activityEntry.activityDuration.$dirty}">
         <label class="col-sm-4 control-label" for="activityDuration">Activity Duration</label>
         <div class="col-sm-8">
-          <input class="number-input form-control" id="activityDuration" ng-model="activity.activityDuration"
-                 ng-minlength="1" ng-maxlength="25" max="{{ lessonInfo.lessonDuration }}" step="5" min="5" value="5" type="number">
+          <input class="number-input form-control" id="activityDuration" name="activityDuration" ng-model="activity.activityDuration"
+                    max="{{ lessonInfo.lessonDuration }}" step="5" min="5" value="5" type="number">
+          <span class="sr-only">(error)</span>
+          <div class="help-block" ng-show="activityEntry.activityDuration.$invalid && activityEntry.activityDuration.$dirty">
+            <span class="error" ng-show="activityEntry.activityDuration.$error.required">Please enter a duration for the activity.</span>
+          </div>
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{'has-error has-feedback' : activityEntry.activityName.$invalid && activityEntry.activityName.$dirty}">
         <label class="col-sm-4 control-label">Activity Materials?</label>
         <div class="col-sm-8">
           <div class="checkbox">
@@ -49,7 +63,7 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{'has-error has-feedback' : activityEntry.activityName.$invalid && activityEntry.activityName.$dirty}">
         <label class="col-sm-4 control-label">Activity Equipment?</label>
         <div class="col-sm-8">
           <div class="checkbox">
@@ -63,7 +77,7 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{'has-error has-feedback' : activityEntry.activityName.$invalid && activityEntry.activityName.$dirty}">
         <label class="col-sm-4 control-label" for="relatedObj">Related Objective(s)</label>
         <div class="col-sm-8">
           <select class="form-control" id="relatedObj" ng-model="activity.relatedObj">
@@ -77,7 +91,7 @@
 
       <hr>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{'has-error has-feedback' : activityEntry.activityName.$invalid && activityEntry.activityName.$dirty}">
         <div class="col-sm-offset-6 col-sm-6 text-right">
           <button type="button" class="btn btn-default btn-sm" ng-click="clearContents($index)">Clear Contents</button>
           <button type="button" class="btn btn-danger btn-sm" ng-click="deleteActivity($index)">Delete Activity</button>

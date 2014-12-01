@@ -2,20 +2,21 @@
   <h1>OBJECTIVES</h1>
 </div>
 
-<pre ng-repeat="objective in objectives">{{ objective }}</pre>
+<!-- <pre ng-repeat="objective in objectives">{{ objective }}</pre> -->
 
 <div class="well" ng-repeat="objective in objectives">
 
   <form class="form-horizontal" role="form" name="objectiveEntry">
 
     <div class="form-group">
-      <div class="col-sm-1"><span class="badge">{{ $index + 1 }}</span></div>
-      <label class="col-sm-4 control-label" for="objDesc">Objective Description</label>
+      <div class="col-sm-2"><span class="badge">{{ $index + 1 }}</span></div>
+      <label class="col-sm-3 control-label" for="objDesc">Objective Details</label>
       <div class="col-sm-6">
-        <input id="objDesc" ng-model="objective.objDesc" class="form-control" type="text"/>
+        <textarea id="objDesc" ng-model="objective.objDesc" class="form-control" placeholder="The student will be able to demonstrate..." cols="15" rows="4" type="text"></textarea>
       </div>
       <div class="col-sm-1">
-        <a ng-click="deleteObjective($index)"><span class="glyphicon glyphicon-remove-circle"></span></a>
+        <a ng-click="deleteObjective($index)" data-toggle="tooltip" data-placement="right"
+          title="Delete"><span class="glyphicon glyphicon-remove-circle"></span></a>
       </div>
     </div>
 
