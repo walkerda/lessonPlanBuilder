@@ -1,75 +1,100 @@
 <div id="print-page">
   <div class="section-header">
-    <h1>PREVIEW & PRINT</h1>
+    <h1>PREVIEW &amp; PRINT</h1>
   </div>
 
-  <pre>{{ lessonInfo }}</pre>
+<!--   <pre>{{ lessonInfo }}</pre>
   <pre ng-repeat="activity in activities">{{ activity }}</pre>
-  <pre ng-repeat="objective in objectives">{{ objective }}</pre>
+  <pre ng-repeat="objective in objectives">{{ objective }}</pre> -->
 
   <button class="btn btn-danger print-btn" ng-click="print()">PRINT LESSON PLAN</button>
 
-  <div class="well">
-    <h4>LESSON INFORMATION</h4>
-    <table class="table">
-      <tr>
-        <td>Lesson Name:</td>
-        <td>{{ lessonInfo.lessonName }}</td>
-      </tr>
-      <tr>
-        <td>Lesson Description:</td>
-        <td>{{ lessonInfo.lessonDesc }}</td>
-      </tr>
-      <tr>
-        <td>Teacher Name:</td>
-        <td>{{ lessonInfo.teacherName }}</td>
-      </tr>
-      <tr>
-        <td>Lesson Duration:</td>
-        <td>{{ lessonInfo.lessonDuration }}</td>
-      </tr>
-      <tr>
-        <td>Lesson Date:</td>
-        <td>{{ lessonInfo.lessonDate }}</td>
-      </tr>
-    </table>
-    <hr/>
+  <div class="well form-area content">
+    
+    <header>
+      <h1 placeholder="Lesson Plan Name">{{ lessonInfo.lessonName }}</h1>
+      <h4>by: {{ lessonInfo.teacherName }}</h4>
+      <h5>Scheduled on: {{ lessonInfo.lessonDate }}</h5>
+    </header>
+    
+    <hr />
+    
+    <article>
+      <h4>LESSON INFORMATION</h4>
+<!--       <table class="table tb-lessonInfo">
+        <tbody>
+          <tr>
+            <td>Lesson Description: </td>
+            <td>{{ lessonInfo.lessonDesc }}</td>
+          </tr>
+          <tr>
+            <td>Lesson Duration: </td>
+            <td>{{ lessonInfo.lessonDuration }} minutes</td>
+          </tr>
+        </tbody>
+      </table> -->
+      
+      <p>Lesson Description: {{ lessonInfo.lessonDesc }}</p>
+      <p>Lesson Duration: {{ lessonInfo.lessonDuration }} minutes</p>
+        
+        <hr />
+        
+      <h4>OBJECTIVES</h4>
+      <div class="well tb-objectives" ng-repeat="objective in objectives">
+        <table class="table obj-content">
+          <tbody>
+            <tr>
+              <span class="badge print-badge">{{ $index + 1 }}</span>
+            </tr>
+            <tr>
+              <td>Objective:</td>
+              <td>{{ objective.objDesc }}</td>
+            </tr>
+          </tbody>
+        </table>        
+      </div>
+              
+      <hr />
+      
+      <h4>ACTIVITIES</h4>
+      <div class="well tb-activities" ng-repeat="activity in activities">
+        <div>
+          <span class="badge print-badge">{{ $index + 1 }}</span>
+        </div>
+        <table class="table">
+        <tbody>
+          <tr>
+            <td>Activity Name:</td>
+            <td>{{ activity.activityName }}</td>
+          </tr>
+          <tr>
+            <td>Activity Description:</td>
+            <td>{{ activity.activityDesc }}</td>
+          </tr>
+          <tr>
+            <td>Activity Duration:</td>
+            <td>{{ activity.activityDuration }} minutes</td>
+          </tr>
+          <tr>
+            <td>Activity Materials:</td>
+            <td>{{ activity.activityMat }}</td>
+          </tr>
+          <tr>
+            <td>Activity Equipment:</td>
+            <td>{{ activity.activityEquip }}</td>
+          </tr>
+          <tr>
+            <td>Related Objectives:</td>
+            <td>{{ activity.relatedObj }}</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    
+    </article>
+    
+    <div class="end-of-page-footer">
+      <p>Lesson plan created using the <em>LESSON PLAN BUILDER</em></p>
+    </div>
 
-    <h4>OBJECTIVES</h4>
-    <table class="table" ng-repeat="objective in objectives">
-      <tr>
-        <td>Objective:</td>
-        <td>{{ objective.objDesc }}</td>
-      </tr>
-    </table>
-    <hr/>
-
-    <h4>ACTIVITIES</h4>
-    <table class="table" ng-repeat="activity in activities">
-      <tr>
-        <td>Activity Name:</td>
-        <td>{{ activity.activityName }}</td>
-      </tr>
-      <tr>
-        <td>Activity Description:</td>
-        <td>{{ activity.activityDesc }}</td>
-      </tr>
-      <tr>
-        <td>Activity Duration:</td>
-        <td>{{ activity.activityDuration }}</td>
-      </tr>
-      <tr>
-        <td>Activity Materials:</td>
-        <td>{{ activity.activityMat }}</td>
-      </tr>
-      <tr>
-        <td>Activity Equipment:</td>
-        <td>{{ activity.activityEquip }}</td>
-      </tr>
-      <tr>
-        <td>Related Objectives:</td>
-        <td>{{ activity.relatedObj }}</td>
-      </tr>
-    </table>
-  </div>
 </div>

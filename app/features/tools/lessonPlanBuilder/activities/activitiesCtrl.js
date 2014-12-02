@@ -10,7 +10,6 @@ function ActivitiesCtrl($scope, ActivityService, LessonInfoService, ObjectivesSe
   $scope.clearContents = ActivityService.clear;
   $scope.deleteActivity = ActivityService.delete;
 
-  $('#relatedObj').multiselect();
 
 }
 

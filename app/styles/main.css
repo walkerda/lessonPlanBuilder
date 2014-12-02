@@ -39,21 +39,16 @@ a { cursor:pointer; }
   margin: 0 12px;
 }
 
-/* Main Window */
+/* Main Content */
 
 .section-header {
   margin-top: 65px;
   text-align: center;
 }
 
-.well {
+.form-area {
   margin-top: 50px;
   background-color: #7a8288;
-}
-
-.print-btn {
-  margin-bottom: 15px;
-  border: none;
 }
 
 .lower-button {
@@ -64,10 +59,39 @@ a { cursor:pointer; }
   width: 18%;
 }
 
-.badge {
+.input-badge {
   font-size: 2em;
   background-color: #272b30;
   border-radius: 5px;
+}
+
+/* Main Content -- Preview & Print  */
+
+article table {
+  border: none;
+}
+
+.tb-objectives table {
+   border: none;
+}
+
+.print-btn {
+  margin-bottom: -25px;
+  margin-top: 25px;
+  border: none;
+}
+
+.print-badge {
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.tb-objectives .obj-content {
+  width: 75%;
+  display: inline-block;
+/*   float: right; */
+  position: relative;
+  border: none;
 }
 
 
