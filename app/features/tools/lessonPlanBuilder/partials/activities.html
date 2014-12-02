@@ -41,12 +41,13 @@
         <label class="col-sm-4 control-label" for="activityDuration">Activity Duration</label>
         <div class="col-sm-8">
           <input class="number-input form-control" id="activityDuration" name="activityDuration" ng-model="activity.activityDuration"
-                    max="{{ lessonInfo.lessonDuration }}" step="5" min="5" type="number" required>
+                    max="{{ activityDuration(activity) }}" step="5" min="5" type="number" required>
           <span class="sr-only">(error)</span>
           <div class="help-block" ng-show="activityEntry.activityDuration.$invalid && activityEntry.activityDuration.$dirty">
             <span class="error" ng-if="activityEntry.activityDuration.$error.required">Please enter a duration for the activity.</span>
             <span class="error" ng-if="activityEntry.activityDuration.$error.min">Your activity must be at least five (5) minutes in length.</span>
             <span class="error" ng-if="activityEntry.activityDuration.$error.number">Please enter a number.</span>
+            <span class="error" ng-if="activityEntry.activityDuration.$error.max">You have exceeded the lesson duration.</span>
           </div>
         </div>
       </div>
@@ -54,12 +55,12 @@
       <div class="form-group" ng-class="{'has-error' : activityEntry.activityMat.$invalid && activityEntry.activityMat.$dirty}">
         <label class="col-sm-4 control-label">Activity Materials?</label>
         <div class="col-sm-8">
-          <div class="checkbox" name="activityMat" required>
+          <div class="radio">
             <label>
-              <input ng-model="activity.activityMat"  ng-true-value="yes" type="checkbox" checked> Yes
+              <input ng-model="activity.activityMat" name="activityMat"  value="yes" type="radio"> Yes
             </label>
             <label>
-              <input ng-model="activity.activityMat" ng-true-value="no" type="checkbox"> No
+              <input ng-model="activity.activityMat" name="activityMat" value="no" type="radio"> No
             </label>
             <span class="sr-only">(error)</span>
             <div class="help-block" ng-show="activityEntry.activityMat.$invalid && activityEntry.activityMat.$dirty">
@@ -72,12 +73,12 @@
       <div class="form-group" ng-class="{'has-error has-feedback' : activityEntry.activityName.$invalid && activityEntry.activityName.$dirty}">
         <label class="col-sm-4 control-label">Activity Equipment?</label>
         <div class="col-sm-8">
-          <div class="checkbox">
+          <div class="radio">
             <label>
-              <input ng-model="activity.activityEquip" ng-true-value="yes" type="checkbox" checked> Yes
+              <input ng-model="activity.activityEquip" name="activityEquip" value="yes" type="radio"> Yes
             </label>
             <label>
-              <input ng-model="activity.activityEquip" ng-true-value="no" type="checkbox"> No
+              <input ng-model="activity.activityEquip" name="activityEquip" value="no" type="radio"> No
             </label>
           </div>
         </div>

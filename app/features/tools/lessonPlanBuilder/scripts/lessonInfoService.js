@@ -6,7 +6,7 @@ function LessonInfoService() {
     lessonName: "",
     lessonDesc: "",
     teacherName: "",
-    lessonDuration: "",
+    lessonDuration: 0,
     lessonDate: ""
   };
 

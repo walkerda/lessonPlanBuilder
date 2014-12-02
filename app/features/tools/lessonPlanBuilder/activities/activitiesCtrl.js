@@ -9,6 +9,10 @@ function ActivitiesCtrl($scope, ActivityService, LessonInfoService, ObjectivesSe
   $scope.addActivity = ActivityService.add;
   $scope.clearContents = ActivityService.clear;
   $scope.deleteActivity = ActivityService.delete;
+  
+  $scope.activityDuration = function(activity) {
+    return $scope.lessonInfo.lessonDuration;
+  };
 
 
 }

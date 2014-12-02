@@ -4,9 +4,9 @@ function ActivityService() {
   var emptyActivity = {
     activityName: "",
     activityDesc: "",
-    activityDuration: "",
-    activityMat: "",
-    activityEquip: "",
+    activityDuration: 0,
+    activityMat: "yes",
+    activityEquip: "yes",
     relatedObj: ""
   };
 
