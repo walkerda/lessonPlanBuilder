@@ -11,7 +11,20 @@ function ActivitiesCtrl($scope, ActivityService, LessonInfoService, ObjectivesSe
   $scope.deleteActivity = ActivityService.delete;
   
   $scope.activityDuration = function(activity) {
-    return $scope.lessonInfo.lessonDuration;
+    
+    console.log($scope.activities.length);
+    
+    var totalActivityDuration = function(index) {
+      var totalDuration = 0;
+      for (var i = 0; i < $scope.activities.length; i++) {
+        totalDuration += activity.activityDuration;
+      }
+      return totalDuration;
+    }
+    
+    var possibleActivityDuration = $scope.lessonInfo.lessonDuration - totalActivityDuration();
+    
+    return possibleActivityDuration;
   };
 
 
